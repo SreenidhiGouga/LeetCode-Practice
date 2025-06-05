@@ -26,3 +26,17 @@ class ContainsDuplicates {
     }
 }
 
+//Without Built-in functions or collections but time complexity is not optimal
+class Solution{
+    public boolean containsDuplicate(int[] nums){
+        for(int i=0;i<nums.length-1;i++){
+            for(int j=i+1;j<nums.length;j++){
+                if(nums[j] == nums[i]){
+                    return true;    
+                }    
+            }  
+        }
+        return false;
+    }
+}
+
